@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From The Other Side - Add Sighting</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/upload_sighting.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/candle-log.png" alt="Candle Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sighting.html">Read</a></li>
+                    <li><a href="upload_sighting.html" class="active">Upload</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="upload-content">
+            <h1>ADD SIGHTING</h1>
+            <form id="sighting-form" action="/api/sighting" method="POST">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="datetime">Time/Date:</label>
+                    <input type="text" id="datetime" name="date" placeholder="dd/mm/yyyy, --:--" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="details">Details:</label>
+                    <textarea name="details" id="details" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">SUBMIT</button>
+            </form>
+        </main>
+        <footer>
+            <p>&copy; From The Other Side. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
